@@ -1,0 +1,54 @@
+{
+  "name": "decky-xbox-wireless-helper",
+  "version": "1.2.1",
+  "description": "Decky plugin that fixes the Xbox Wireless Adapter after sleep and adds a pairing button",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "typecheck": "tsc --noEmit",
+    "test": "python3 -m unittest discover -s tests -v",
+    "package": "pnpm build && ./scripts/package.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m2aadhil/decky-xbox-wireless-helper.git"
+  },
+  "keywords": [
+    "decky",
+    "plugin",
+    "steam-deck",
+    "bazzite",
+    "steamos",
+    "xbox",
+    "controller"
+  ],
+  "author": "Aadhil",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/m2aadhil/decky-xbox-wireless-helper/issues"
+  },
+  "homepage": "https://github.com/m2aadhil/decky-xbox-wireless-helper#readme",
+  "devDependencies": {
+    "@decky/rollup": "^1.0.2",
+    "@decky/ui": "^4.12.1",
+    "@types/react": "19.1.1",
+    "@types/react-dom": "19.1.1",
+    "rollup": "^4.53.3",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@decky/api": "^1.1.3",
+    "react-icons": "^5.3.0",
+    "tslib": "^2.7.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom"
+      ]
+    }
+  },
+  "packageManager": "pnpm@9.15.9"
+}

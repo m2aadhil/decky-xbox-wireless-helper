@@ -1,0 +1,62 @@
+"""Helpers for controlling the Xbox Wireless Adapter through sysfs."""
+
+from .usb import (
+    DEFAULT_PIDS,
+    MICROSOFT_VID,
+    Dongle,
+    find_dongles,
+    ResetError,
+    describe_oserror,
+    driver_name,
+    pairing_path,
+    reset_device,
+    resolve_device,
+    soft_replug,
+    wait_for_stable,
+    set_pairing,
+)
+from .suspend import SuspendDetector
+from .wake import (
+    AcpiWake,
+    WakeLink,
+    acpi_entries_for,
+    apply_acpi_wake,
+    apply_wake,
+    disable_wake,
+    read_mem_sleep,
+    restore_acpi_wake,
+    set_mem_sleep,
+    wake_chain,
+)
+from .diag import Controller, UsbDevice, find_controllers, microsoft_usb_devices
+
+__all__ = [
+    "DEFAULT_PIDS",
+    "MICROSOFT_VID",
+    "Dongle",
+    "find_dongles",
+    "ResetError",
+    "describe_oserror",
+    "driver_name",
+    "pairing_path",
+    "reset_device",
+    "resolve_device",
+    "soft_replug",
+    "wait_for_stable",
+    "set_pairing",
+    "SuspendDetector",
+    "WakeLink",
+    "apply_wake",
+    "disable_wake",
+    "wake_chain",
+    "AcpiWake",
+    "acpi_entries_for",
+    "apply_acpi_wake",
+    "restore_acpi_wake",
+    "read_mem_sleep",
+    "set_mem_sleep",
+    "Controller",
+    "UsbDevice",
+    "find_controllers",
+    "microsoft_usb_devices",
+]

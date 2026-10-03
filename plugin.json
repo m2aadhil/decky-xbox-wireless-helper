@@ -1,0 +1,19 @@
+{
+  "name": "Xbox Wireless Helper",
+  "author": "Aadhil Musthaq",
+  "flags": [
+    "root"
+  ],
+  "api_version": 1,
+  "publish": {
+    "tags": [
+      "controller",
+      "xbox",
+      "fix",
+      "suspend",
+      "root"
+    ],
+    "description": "Fixes the Xbox Wireless Adapter after sleep on Bazzite/SteamOS (no more replugging), lets the controller wake the PC, and adds a pairing-mode button.",
+    "image": "https://opengraph.githubassets.com/1/m2aadhil/decky-xbox-wireless-helper"
+  }
+}
