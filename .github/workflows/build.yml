@@ -1,0 +1,43 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type-check frontend
+        run: pnpm typecheck
+
+      - name: Backend unit tests
+        run: pnpm test
+
+      - name: Build and package
+        run: pnpm package
+
+      - name: Upload plugin zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: decky-xbox-wireless-helper-${{ github.sha }}
+          path: out/decky-xbox-wireless-helper.zip
+          if-no-files-found: error

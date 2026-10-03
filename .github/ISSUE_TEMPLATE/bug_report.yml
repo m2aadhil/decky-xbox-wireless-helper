@@ -1,0 +1,35 @@
+name: Bug report
+description: The adapter or pairing doesn't behave as expected
+labels: [bug]
+body:
+  - type: input
+    id: os
+    attributes:
+      label: OS and version
+      placeholder: Bazzite 42 (deck image) / SteamOS 3.7 / ...
+    validations:
+      required: true
+  - type: input
+    id: adapter
+    attributes:
+      label: Adapter USB ID
+      description: Output of `lsusb | grep -i 045e`
+    validations:
+      required: true
+  - type: input
+    id: driver
+    attributes:
+      label: Driver
+      description: Output of `lsusb -t` for the adapter (xone, xpad, ...)
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Plugin log
+      description: Contents of the newest file in `~/homebrew/logs/Xbox Wireless Helper/`
+      render: text
