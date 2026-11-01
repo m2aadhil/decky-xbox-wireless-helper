@@ -31,7 +31,7 @@
   "homepage": "https://github.com/m2aadhil/decky-xbox-wireless-helper#readme",
   "devDependencies": {
     "@decky/rollup": "^1.0.2",
-    "@decky/ui": "^4.12.1",
+    "@decky/ui": "^4.16.4",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "rollup": "^4.53.3",
