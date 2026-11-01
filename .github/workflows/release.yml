@@ -42,7 +42,7 @@ jobs:
         run: pnpm package
 
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: out/decky-xbox-wireless-helper.zip
           generate_release_notes: true
